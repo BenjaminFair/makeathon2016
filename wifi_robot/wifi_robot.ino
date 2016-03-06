@@ -12,8 +12,8 @@ void loop() {
   int front, back;
   sp();
   Serial.println("Clearing buffers...");
-  while(Serial1.available()) Serial1.read();
-  while(Serial2.available()) Serial2.read();
+	Serial1.flush();
+  Serial2.flush();
   do {
     Serial.println("Waiting for front sensor...");
     while(!Serial1.available()) {
